@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FlaskApp</title>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+
+</style>
+</head>
+<body>
+
+
+<form action="/ex1">
+  <label for="table">テーブル:</label>
+  <select name="table" id="table">
+    {% for item in tables %}
+    <option  {% if item[1]%} selected="selected"  {% endif %}  value="{{item[0]}}">{{item[0]}}</option>
+    {% endfor %}
+    
+  </select>
+  <input type="submit" value="検索">
+</form>
+<table>
+  <tr>
+    <th></th>
+    {% for colname in colnames %}
+    <th>{{colname}}</th>
+    {% endfor %}
+  </tr>
+
+  {% for coldata in data %}
+  <tr>
+    <td>{{loop.index}}</td>
+    {% for item in coldata %}
+    <td>{{item}}</td>
+    {% endfor %}
+  </tr>
+  {% endfor %}
+</table>
+
+</body>
+</html>
+

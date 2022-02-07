@@ -1,0 +1,56 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Flask Ex0",
+            "type": "python",
+            "request": "launch",
+            "module": "flask",
+            "env": {
+                "FLASK_APP": "ex/ex0/hello_world.py",
+                "FLASK_ENV": "development"
+            },
+            "args": [
+                "run",
+                //"--no-debugger",
+                "--port=9943"
+            ],
+            "jinja": true
+        },
+        {
+            "name": "Python: Flask Ex1",
+            "type": "python",
+            "request": "launch",
+            "module": "flask",
+            "env": {
+                "FLASK_APP": "ex/ex1/database.py",
+                "FLASK_ENV": "development"
+            },
+            "args": [
+                "run",
+               // "--no-debugger",
+                "--port=9943"
+            ],
+            "jinja": true
+        },
+        {
+            "name": "Python: Flask Ex2",
+            "type": "python",
+            "request": "launch",
+            "module": "flask",
+            "env": {
+                "FLASK_APP": "ex/ex2/database2.py",
+                "FLASK_ENV": "development"
+            },
+            "args": [
+                "run",
+               // "--no-debugger",
+                "--port=9943"
+            ],
+            "jinja": true
+        }
+    ]
+}
